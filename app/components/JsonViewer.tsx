@@ -5,7 +5,7 @@ interface JsonViewerProps {
 }
 
 export default function JsonViewer({ data }: JsonViewerProps) {
-  const renderValue = (value: any, key: string = '', level: number = 0): JSX.Element => {
+  const renderValue = (value: any, key: string = '', level: number = 0): React.ReactElement => {
     const indent = '  '.repeat(level);
     const isMainHeader = level === 1 && typeof value === 'object' && value !== null && !Array.isArray(value);
 
